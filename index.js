@@ -25,7 +25,7 @@ function getFilms(e){
 
 function getMovieList(data){
     for(i =0; i<data.Search.length; i++){
-        fetch(`http://www.omdbapi.com/?apikey=${apiKey}&i=${data.Search[i].imdbID}`)
+        fetch(`https://www.omdbapi.com/?apikey=${apiKey}&i=${data.Search[i].imdbID}`)
             .then(res => res.json())
             .then(data => getMovieLayout(data))
                 if (inputEl.value){
