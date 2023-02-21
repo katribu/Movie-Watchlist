@@ -11,7 +11,7 @@ search.addEventListener("click", getFilms)
 function getFilms(e){
     e.preventDefault()
     let searchFilm = inputEl.value
-    fetch(`http://www.omdbapi.com/?apikey=${apiKey}&s=${searchFilm}`)
+    fetch(`https://www.omdbapi.com/?apikey=${apiKey}&s=${searchFilm}`)
     .then(res => res.json())
     .then(data => getMovieList(data))
     .catch(err => {

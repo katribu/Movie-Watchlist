@@ -12,7 +12,7 @@ if(watchList.length > 0){
 
 function getSavedMovies(){
     for (let i = 0; i < watchList.length; i++){
-        fetch(`http://www.omdbapi.com/?apikey=${apiKey}&i=${watchList[i]}`)
+        fetch(`https://www.omdbapi.com/?apikey=${apiKey}&i=${watchList[i]}`)
         .then(res => res.json())
         .then(data => {
             const {Poster, Title, imdbRating, Runtime, Genre, Plot, imdbID} = data
